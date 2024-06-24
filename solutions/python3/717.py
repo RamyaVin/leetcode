@@ -1,10 +1,11 @@
 class Solution:
-    def isOneBitCharacter(self, bits):
-        """
-        :type bits: List[int]
-        :rtype: bool
-        """
-        while bits:
-            last=bits.pop(0)
-            if last==1:bits.pop(0)
-        return True if last==0 else False
+    def isOneBitCharacter(self, bits: List[int]) -> bool:
+        index = 0
+        while index < len(bits):
+            if index == len(bits)-1: 
+                return True
+            if bits[index] == 1: 
+                index += 2              
+            else: 
+                index += 1
+        return False
