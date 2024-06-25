@@ -1,12 +1,11 @@
-class Solution:    
+class Solution:
     def isOneBitCharacter(self, bits: List[int]) -> bool:
-        i = 0
-        while i < len(bits):
-            if bits[i] == 1:
-                i += 2
-                if i > len(bits):
-                    return False
-            else:
-                if i == len(bits)-1:
-                    return True
-                i += 1
+        index = 0
+        while index < len(bits):
+            if index == len(bits)-1: 
+                return True
+            if bits[index] == 1: 
+                index += 2              
+            else: 
+                index += 1
+        return False
