@@ -3,7 +3,8 @@
 #Explanation: 342 + 465 = 807.
 
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+
         if l1 is None and l2 is None:
             return None
 
